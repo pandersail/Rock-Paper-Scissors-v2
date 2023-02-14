@@ -19,4 +19,11 @@ do a if statement, for each outcome and count them and store them on the score v
 
 Put the playabe part inside a while loop for <5 rounds
 
-Alert of final score
+Alert of final score */
+
+let win = 0;
+let loss = 0;
+let draw = 0;
+let computerOptions = ["rock", "paper", "scissors"];
+let userOptions;
+let playPrompt = "What will you play?";
