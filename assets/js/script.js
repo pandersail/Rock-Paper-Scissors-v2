@@ -57,11 +57,8 @@ let getComputerChoice = function() {
 
     console.log("Computer has played " + computerOptions[computerRandom])
     return computerOptions[computerRandom];
-
-
-
-
 }
+
 getComputerChoice()
 
 
