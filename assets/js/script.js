@@ -25,5 +25,43 @@ let win = 0;
 let loss = 0;
 let draw = 0;
 let computerOptions = ["rock", "paper", "scissors"];
-let userOptions;
-let playPrompt = "What will you play?";
+let computerInput = "";
+let userInput = "";
+
+let getUserChoice = function() {
+
+    let playPrompt = prompt("What will you play?");
+    
+    userInput = playPrompt.toLowerCase()
+
+    if (userInput !== "rock" && 
+    userInput !== "paper" && 
+    userInput !== "scissors") {
+        alert("Please input either rock, paper or scissors");
+    }
+
+    else { 
+        console.log("you have played " + userInput); //verification function works
+        return userInput;
+   }
+    }
+   
+getUserChoice()
+
+let getComputerChoice = function() {
+
+
+
+    for (let i = 0; i < computerOptions.length; i++) {
+            computerInput = Math.floor(Math.random() * computerOptions.length);
+            console.log(computerInput);
+
+    }
+
+
+
+
+}
+getComputerChoice()
+
+
