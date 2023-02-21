@@ -40,13 +40,11 @@ let getUserChoice = function() {
         alert("Please input either rock, paper or scissors");
     }
 
-    else { 
-        console.log("You have played " + userInput); //verification function works
-        return userInput;
-   }
+//     else { 
+        
+//    }
+   return userInput;
     }
-   
-//getUserChoice()
 
 let getComputerChoice = function() {
     let computerRandom = "";
@@ -55,10 +53,24 @@ let getComputerChoice = function() {
             computerRandom = Math.floor(Math.random() * computerOptions.length);
     }
 
-    console.log("Computer has played " + computerOptions[computerRandom])
-    return computerOptions[computerRandom];
+    computerInput = computerOptions[computerRandom];
+    
+
+    // results
+
+    if (getUserChoice(userInput) == computerInput) {
+        console.log("Computer has played " + computerInput + ". It is a draw.");
+    }
+
+   else if (getUserChoice(userInput) == "paper" && computerInput == "rock" ||
+            getUserChoice(userInput) == "rock" && computerInput == "scissors" ||
+            getUserChoice(userInput) == "scissors" && computerInput == "paper") {
+                console.log("Computer has played " + computerInput + ". You win, hurray!");
+            }
+    else {
+        console.log("Computer has played " + computerInput + ". You lost, try again maybe.")
+    }
 }
 
 getComputerChoice()
-
 
