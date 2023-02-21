@@ -41,22 +41,22 @@ let getUserChoice = function() {
     }
 
     else { 
-        console.log("you have played " + userInput); //verification function works
+        console.log("You have played " + userInput); //verification function works
         return userInput;
    }
     }
    
-getUserChoice()
+//getUserChoice()
 
 let getComputerChoice = function() {
+    let computerRandom = "";
 
-
-
-    for (let i = 0; i < computerOptions.length; i++) {
-            computerInput = Math.floor(Math.random() * computerOptions.length);
-            console.log(computerInput);
-
+    for (let i = 0; i < 1; i++) {
+            computerRandom = Math.floor(Math.random() * computerOptions.length);
     }
+
+    console.log("Computer has played " + computerOptions[computerRandom])
+    return computerOptions[computerRandom];
 
 
 
