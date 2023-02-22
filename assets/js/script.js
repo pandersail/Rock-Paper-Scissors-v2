@@ -24,7 +24,6 @@ Alert of final score */
 let win = 0;
 let loss = 0;
 let draw = 0;
-let count = 0;
 let computerOptions = ["rock", "paper", "scissors"];
 let computerInput = "";
 let userInput = "";
@@ -32,6 +31,7 @@ let userInput = "";
 function game() {
 
     while (win !== 3 && draw !== 3 && loss !== 3) {
+        
 // user input
 
     let playPrompt = prompt("What will you play?");
@@ -74,8 +74,6 @@ function game() {
         loss++
     }
     console.log("win: " + win + ", loss: " + loss + ", draw: " + draw + ".");
-
-    count++
   }
 
 }
