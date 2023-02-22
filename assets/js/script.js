@@ -24,29 +24,30 @@ Alert of final score */
 let win = 0;
 let loss = 0;
 let draw = 0;
+let count = 0;
 let computerOptions = ["rock", "paper", "scissors"];
 let computerInput = "";
 let userInput = "";
 
-let getUserChoice = function() {
+function game() {
+
+    while (win !== 3 && draw !== 3 && loss !== 3) {
+// user input
 
     let playPrompt = prompt("What will you play?");
     
     userInput = playPrompt.toLowerCase()
 
     if (userInput !== "rock" && 
-    userInput !== "paper" && 
-    userInput !== "scissors") {
-        alert("Please input either rock, paper or scissors");
+        userInput !== "paper" && 
+        userInput !== "scissors") {
+
+        alert("Please input either rock, paper or scissors. Refresh to start again.");
+        break;
     }
 
-//     else { 
-        
-//    }
-   return userInput;
-    }
+// computer ramdomise
 
-let getComputerChoice = function() {
     let computerRandom = "";
 
     for (let i = 0; i < 1; i++) {
@@ -54,23 +55,30 @@ let getComputerChoice = function() {
     }
 
     computerInput = computerOptions[computerRandom];
-    
 
-    // results
+// results
 
-    if (getUserChoice(userInput) == computerInput) {
+    if (userInput == computerInput) {
         console.log("Computer has played " + computerInput + ". It is a draw.");
+        draw++
     }
 
-   else if (getUserChoice(userInput) == "paper" && computerInput == "rock" ||
-            getUserChoice(userInput) == "rock" && computerInput == "scissors" ||
-            getUserChoice(userInput) == "scissors" && computerInput == "paper") {
+   else if (userInput == "paper" && computerInput == "rock" ||
+            userInput == "rock" && computerInput == "scissors" ||
+            userInput == "scissors" && computerInput == "paper") {
                 console.log("Computer has played " + computerInput + ". You win, hurray!");
+                win++
             }
     else {
-        console.log("Computer has played " + computerInput + ". You lost, try again maybe.")
+        console.log("You played " + userInput + " and computer has played " + computerInput + ". You lost, try again maybe.")
+        loss++
     }
+    console.log("win: " + win + ", loss: " + loss + ", draw: " + draw + ".");
+
+    count++
+  }
+
 }
 
-getComputerChoice()
+game()
 
