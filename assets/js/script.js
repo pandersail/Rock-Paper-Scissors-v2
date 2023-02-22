@@ -30,8 +30,8 @@ let userInput = "";
 
 function game() {
 
-    while (win !== 3 && draw !== 3 && loss !== 3) {
-        
+    while (win !== 3 && loss !== 3) {
+
 // user input
 
     let playPrompt = prompt("What will you play?");
